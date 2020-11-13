@@ -4466,6 +4466,18 @@
       "filter_matches": [
         {
           "filter_category": "Compatibility",
+          "filter_value": "Pixel 5"
+        },
+        {
+          "filter_category": "Compatibility",
+          "filter_value": "Pixel 4a (5G)"
+        },
+        {
+          "filter_category": "Compatibility",
+          "filter_value": "Pixel 4a"
+        },
+        {
+          "filter_category": "Compatibility",
           "filter_value": "Pixel 4"
         },
         {
@@ -10119,5 +10131,5 @@
       "url": "/product/nest_learning_thermostat_3rd_gen_base"
     }
   ],
-  "updated": 1605129553
+  "updated": 1605247809
 }

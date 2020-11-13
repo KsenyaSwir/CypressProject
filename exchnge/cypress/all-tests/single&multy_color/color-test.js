@@ -17,6 +17,7 @@ describe('Single and multy color test', () => {
             cy.writeFile('cypress/fixtures/products.json', response.body)
         })
     })
+
     it('Navigate and search', () => {
         cy.fixture('products').then(products => {
             MainPage.open();
@@ -43,6 +44,9 @@ describe('Single and multy color test', () => {
                 }
             }
         })
-        //cy.get('div[class="mdc-button__ripple"]').contains('Go to card')
+    })
+
+    it('Remove', () => {
+        cy.contains('Remove').click()
     })
 })

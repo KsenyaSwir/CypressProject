@@ -7,17 +7,24 @@ class SearchResultsPage{
         cy.get('div[class="hidden-xs bar-container background-white"]').contains('Buy').parent().click()
     }
     findElementByColor(obj){
-      /*cy.server()
-        cy.route("GET", '/config/pixel_buds').as('getToken')
-        cy.get('div[class="mqn-lobby-swatch__cards-container"]')
-        cy.wait('@getToken').its('status').should('eq', 200)*/
         let random = chance.pickone(obj.images).color
         cy.log(random.color_name)
-        //cy.get('div[class="mqn-lobby-swatch__card__inner"]')
-
-        cy.contains(random.color_name).should('exist').parent().next().next().find('button')
-
-        //cy.get('div[class="mqn-lobby-swatch__cards-container"]').should('exist').contains(`${random.color_name}`).parent().parent().find('button').click()
+        cy.wait(2000)
+        cy.contains('White').should('exist').parent().next().next().find('button').click()
+        cy.wait(5000)
+        cy.get('button[class="mdc-button mdc-button--unelevated mdc-button--touch GmFillButton GmFillButtonDarkTheme GmTextLabelButton"]').first().click({force: true})
+        cy.get('div[class="roboto-header-text-9"]').invoke('text').then(name => {
+            const assert = require('assert');
+            assert.deepEqual(name, obj.display_name+" (White)")
+        })
+        cy.get('span[class="roboto-header-text-6 float-right"]').invoke('text').then(amount => {
+            cy.get('div[class="cart-price-bottom-padding text-right"]').invoke('text').then(prise => {
+                assert.deepEqual(amount, prise)
+            })
+        })
+        cy.get('option[selected="true"]').invoke('text').then(count =>{
+            assert.deepEqual(count, "1")
+        })
     }
 }
 

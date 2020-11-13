@@ -15,7 +15,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/cypress/page-objects" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -44,7 +44,8 @@
       <updated>1604585428600</updated>
       <workItem from="1604585429720" duration="21455000" />
       <workItem from="1604912318152" duration="44532000" />
-      <workItem from="1605185599519" duration="14206000" />
+      <workItem from="1605185599519" duration="14602000" />
+      <workItem from="1605203272739" duration="11206000" />
     </task>
     <servers />
   </component>
